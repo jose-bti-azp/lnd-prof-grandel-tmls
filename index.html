@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.className+=" js"</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Timeless de Dr. Grandel · Línea antiedad profesional para centros de estética</title>
 <meta name="description" content="Timeless de Dr. Grandel: la línea antiedad profesional con extracto de yemas de haya. Protocolo de cabina, 10 referencias de venta y soporte directo en España.">
@@ -260,9 +261,9 @@ footer .f{display:flex;justify-content:space-between;align-items:center;gap:20px
 footer img{height:18px;width:auto}
 
 /* reveal */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
 /* mobile WhatsApp float */
 .wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:none;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.4)}
@@ -293,7 +294,7 @@ footer img{height:18px;width:auto}
 <section class="hero" id="inicio">
   <div class="bg" role="img" aria-label="Piel madura luminosa"></div>
   <div class="wrap">
-    <div class="hero-copy rv">
+    <div class="hero-copy">
       <span class="eyebrow">Para profesionales de la estética</span>
       <h1>Timeless. El antiedad que se <em>prescribe</em>, no que se despacha.</h1>
       <p class="lead">La línea antiedad clásica de Dr. Grandel para la piel madura: un tratamiento de cabina avanzado y diez fórmulas de venta que convierten una visita en una rutina completa, y una clienta en una clienta fiel.</p>
@@ -568,6 +569,7 @@ footer img{height:18px;width:auto}
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
     els.forEach(function(el){io.observe(el)});
+    setTimeout(function(){if(!document.querySelector('.rv.in')){els.forEach(function(el){el.classList.add('in')})}},2000);
   } else { els.forEach(function(el){el.classList.add('in')}) }
   // contador 40.000
   var n=document.querySelector('[data-count]');
