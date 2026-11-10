@@ -206,14 +206,14 @@ header.scrolled{background:rgba(246,241,232,.94);backdrop-filter:blur(10px);box-
 .svc div{padding-top:20px;border-top:1px solid var(--ink)}
 .svc h4{font-family:var(--serif);font-weight:500;font-size:23px;line-height:1.15;margin-bottom:8px}
 .svc p{font-size:17px;color:var(--muted)}
-.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:14px}
-.ph{position:relative;border-radius:3px;overflow:hidden;background:linear-gradient(135deg,#e7dccb,#d9c9b1);display:flex;align-items:flex-end}
-.ph:first-child{grid-row:span 2}
-.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.ph img.mono{position:absolute;inset:auto;top:50%;left:50%;width:70px;height:auto;object-fit:contain;transform:translate(-50%,-62%);opacity:.5}
-.ph .lbl{position:relative;margin:16px;background:#f6f1e8;font-size:16px;letter-spacing:.06em;padding:7px 12px;border-radius:2px}
-.ph.pending{outline:1px dashed rgba(176,122,79,.6);outline-offset:-10px}
-@media (max-width:900px){.support-head{grid-template-columns:1fr;gap:20px}.svc{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}.ph:first-child{grid-column:span 2;grid-row:auto}}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ph{position:relative;margin:0;border-radius:3px;overflow:hidden;background:#e7dccb}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph.wide{grid-column:1/-1;aspect-ratio:16/7}
+.ph.wide img{object-position:50% 45%}
+.ph.tall{aspect-ratio:3/4}
+.ph figcaption{position:absolute;left:14px;bottom:14px;background:#f6f1e8;color:var(--ink);font-size:15px;font-weight:500;padding:7px 13px;border-radius:2px}
+@media (max-width:900px){.support-head{grid-template-columns:1fr;gap:20px}.svc{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.ph.wide{aspect-ratio:auto}.ph.tall{aspect-ratio:auto}.ph{background:none}.ph img{aspect-ratio:3/4;height:auto}.ph.wide img{aspect-ratio:4/3}.ph figcaption{position:static;background:none;padding:8px 2px 0;line-height:1.3}}
 
 /* españa */
 .spain{background:var(--green);color:#f3eee5;position:relative;overflow:hidden}
@@ -488,11 +488,11 @@ footer img{height:18px;width:auto}
       <div class="rv"><h4>Acompañamiento directo</h4><p>Un interlocutor en España que conoce la línea por dentro y responde cuando lo necesitas.</p></div>
     </div>
     <div class="gallery rv">
-      <div class="ph pending"><img class="mono" src="img/monogram.svg" alt=""><span class="lbl">Foto formación · grupo en sala</span></div>
-      <div class="ph pending"><img class="mono" src="img/monogram.svg" alt=""><span class="lbl">Foto formación · práctica en cabina</span></div>
-      <div class="ph pending"><img class="mono" src="img/monogram.svg" alt=""><span class="lbl">Foto formación · detalle de masaje</span></div>
-      <div class="ph pending"><img class="mono" src="img/monogram.svg" alt=""><span class="lbl">Foto formación · producto</span></div>
-      <div class="ph pending"><img class="mono" src="img/monogram.svg" alt=""><span class="lbl">Foto formación · equipo</span></div>
+      <figure class="ph wide"><img src="img/formacion-grupo.jpg" alt="Grupo de profesionales con su diploma de la Master Class Dr. Grandel en Barcelona" loading="lazy"><figcaption>Master Class Dr. Grandel · Barcelona</figcaption></figure>
+      <figure class="ph tall"><img src="img/formacion-cabina.jpg" alt="Formadora realizando una demostración práctica en cabina" loading="lazy" style="object-position:50% 30%"><figcaption>Práctica en cabina</figcaption></figure>
+      <figure class="ph tall"><img src="img/formacion-teoria.jpg" alt="Profesionales tomando notas durante la formación" loading="lazy"><figcaption>Formación teórica</figcaption></figure>
+      <figure class="ph tall"><img src="img/formacion-producto.jpg" alt="Productos Dr. Grandel presentados en la formación" loading="lazy" style="object-position:50% 40%"><figcaption>Producto y protocolo</figcaption></figure>
+      <figure class="ph tall"><img src="img/formacion-diploma.jpg" alt="Entrega de diploma Dr. Grandel a una profesional" loading="lazy" style="object-position:50% 30%"><figcaption>Diploma Dr. Grandel</figcaption></figure>
     </div>
   </div>
 </section>
