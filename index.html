@@ -102,6 +102,13 @@ header.scrolled{background:rgba(246,241,232,.94);backdrop-filter:blur(10px);box-
 /* qué es */
 .what{background:var(--cream)}
 .grid-2{display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center}
+.what-logo{text-align:center;margin:-70px 0 36px}
+.what{padding-bottom:70px}
+.what-logo img,.gr-logo img{height:auto;display:inline-block}
+.what-logo img,.gr-logo img{width:clamp(220px,32vw,380px)}
+.gr-logo{text-align:center}
+.gr-logo.after-quote{margin-top:56px}
+.gr-logo.in-contact{margin-bottom:40px}
 .what .img-frame{position:relative}
 .what .img-frame img{border-radius:4px;aspect-ratio:4/4.3;object-fit:cover;width:100%}
 .what .img-frame .tag{position:absolute;left:-26px;bottom:34px;background:var(--green);color:#fff;padding:22px 26px;max-width:270px;border-radius:2px}
@@ -360,6 +367,7 @@ footer img{height:18px;width:auto}
 <!-- QUÉ ES -->
 <section class="what" id="timeless">
   <div class="wrap">
+    <div class="what-logo rv"><img src="img/logo-drgrandel-negro.png" alt="Dr. Grandel · we know your skin." width="1000" height="239" loading="lazy"></div>
     <div class="grid-2">
       <div class="img-frame rv">
         <img src="img/timeless-piel.jpg" alt="Piel madura reafirmada y luminosa" loading="lazy">
@@ -401,6 +409,7 @@ footer img{height:18px;width:auto}
     </div>
 
     <p class="quote signs-quote rv">«No retrasamos el envejecimiento: corregimos el signo que ya está. Y lo hacemos con una sola línea, de la cabina a casa.»</p>
+    <div class="gr-logo after-quote rv"><img src="img/logo-drgrandel-negro.png" alt="Dr. Grandel · we know your skin." width="1000" height="239" loading="lazy"></div>
   </div>
 </section>
 
@@ -491,7 +500,7 @@ footer img{height:18px;width:auto}
     </div>
 
     <figure class="line-photo rv">
-      <img src="img/timeless-bodegon.jpg" srcset="img/timeless-bodegon-1200.jpg 1200w, img/timeless-bodegon.jpg 2400w" sizes="(max-width:1240px) 100vw, 1200px" width="2400" height="1792" alt="Línea completa Timeless de Dr. Grandel sobre fondo dorado" loading="lazy">
+      <img src="img/timeless-bodegon.jpg" srcset="img/timeless-bodegon-1200.jpg 1200w, img/timeless-bodegon.jpg 1400w" sizes="(max-width:1240px) 100vw, 1200px" width="1400" height="1045" alt="Línea completa Timeless de Dr. Grandel sobre fondo dorado" loading="lazy">
     </figure>
 
     <div class="families">
@@ -602,6 +611,7 @@ footer img{height:18px;width:auto}
 <!-- CONTACTO -->
 <section class="contact" id="contacto">
   <div class="wrap">
+    <div class="gr-logo in-contact rv"><img src="img/logo-drgrandel-negro.png" alt="Dr. Grandel · we know your skin." width="1000" height="239" loading="lazy"></div>
     <span class="eyebrow rv">Hablemos</span>
     <h2 class="rv">¿Quieres incorporar <em>Timeless</em> a tu centro?</h2>
     <p class="lead rv">Escríbenos o llámanos. Te contamos cómo trabajar la línea en cabina y en venta, y organizamos la formación de tu equipo.</p>
